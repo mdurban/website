@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "homepage": "https://mdurban.github.io/website/",
   "private": true,
-  "main": "index.js",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
