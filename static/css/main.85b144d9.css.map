@@ -1,0 +1,1 @@
+{"version":3,"sources":["presenters/HelloWorld/hello-world.css"],"names":[],"mappings":"AAAA,QACE,UACA,iBACA,WAAa","file":"static/css/main.85b144d9.css","sourcesContent":[".navbar {\n  color: red;\n  font-color: green;\n  height: 40px; \n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/presenters/HelloWorld/hello-world.css"],"sourceRoot":""}
