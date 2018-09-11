@@ -1884,7 +1884,7 @@ var _redux = __webpack_require__(19);
 
 var _reactRedux = __webpack_require__(8);
 
-var _reducer = __webpack_require__(75);
+var _reducer = __webpack_require__(76);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
@@ -23355,6 +23355,8 @@ var _ChildComponentConnector = __webpack_require__(71);
 
 var _ChildComponentConnector2 = _interopRequireDefault(_ChildComponentConnector);
 
+__webpack_require__(75);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var HelloWorld = function HelloWorld(_ref) {
@@ -23362,6 +23364,7 @@ var HelloWorld = function HelloWorld(_ref) {
   return _react2.default.createElement(
     'div',
     null,
+    _react2.default.createElement('div', { className: 'navbar' }),
     _react2.default.createElement(
       'button',
       { onClick: buttonAction },
@@ -23473,6 +23476,12 @@ exports.default = ChildComponent;
 
 /***/ }),
 /* 75 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .navbar {\n|   color: green;\n|   height: 50px; }");
+
+/***/ }),
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
