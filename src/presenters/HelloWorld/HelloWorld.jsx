@@ -4,13 +4,15 @@ import './hello-world.css'
  
 const HelloWorld = ({ buttonAction }) => (
   <div>
-    <div className='title'>Mike D. Urban</div>
+    <div className='title'>Michael Urban</div>
+    <hr />
     <div className='navbar-container'>
-      <div className='navbar-element'><span className='inner-navbar-element'>About</span></div>
-      <div className='navbar-element'><span className='inner-navbar-element'>Resume</span></div>
-      <div className='navbar-element'><span className='inner-navbar-element'>Projects</span></div>
-      <div className='navbar-element'><span className='inner-navbar-element'>Contact</span></div>
+      <div className='navbar-element'><span className='inner-navbar-element'>about</span></div>
+      <div className='navbar-element'><span className='inner-navbar-element'>resume</span></div>
+      <div className='navbar-element'><span className='inner-navbar-element'>projects</span></div>
+      <div className='navbar-element'><span className='inner-navbar-element'>contact</span></div>
     </div>
+
 
     <button onClick={ buttonAction }>Action</button>
     <ChildComponentConnector />
