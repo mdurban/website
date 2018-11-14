@@ -1,41 +1,68 @@
+@font-face {
+  font-family: handvetica-neue;
+  src: url('../../fonts/handvetica-neue/handvetica.ttf') format('truetype'),
+}
+
 $numberOfStars: 500;
 $heightOfSky: 500px;
-$spaceColor: #10242d;
+$spaceColor: #09151a;
 $skyColor: #316f8c;
 
 .sky {
-  height: $heightOfSky;
+  height: 50vh;//$heightOfSky;
   width: 100%;
   background: linear-gradient(to bottom, $spaceColor, $skyColor);
 
-  .star-container {
-    height: 100px;
-    width: 100px;
-
-    &:hover .star {
-      width: 100px;
-      height: 100px;
-    }
-
-    .star {
-      background-color: #FFF;
-      border-radius: 50%;
-      position: absolute;
-    }
-
+  .star {
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
   }
 
-}
+  @for $i from 1 through $numberOfStars {
+    $size: random(125.0)/100.0 + 0.5 + px;
 
-@for $i from 1 through $numberOfStars {
-  $size: random(125.0)/100.0 + 0.5 + px;
+    .star-container-#{$i} {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: random($heightOfSky * 10.0)/10.0 + px;
+      left: random(1000.0)/10.0 + vw;
+    }
 
-  .star.star-#{$i} {
-    height: $size;
-    width: $size;
-    top: random($heightOfSky * 10.0)/10.0 + px;
-    left: random(1000.0)/10.0 + vw;
-    animation: sparkle (random(40.0)/10.0 + 1.0) + s infinite
+    .star-container-10 {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 87.4px;
+      left: 31.7vw;
+
+      &:hover .star {
+        width: 100px;
+        height: 100px;
+        border-radius: 0%;
+        background-image: url("../../assets/alien.png");
+        background-size: cover;
+        background-color: inherit;
+        animation: initial;
+      }
+
+      .star {
+        width: 150px;
+        height: 125px;
+        border-radius: 0%;
+        background-image: url("../../assets/ufo-two.png");
+        background-size: cover;
+        background-color: inherit;
+        animation: initial;
+      }
+    }
+
+    .star.star-#{$i} {
+      height: $size;
+      width: $size;
+      animation: sparkle (random(40.0)/10.0 + 1.0) + s infinite
+    }
   }
 }
 
@@ -48,29 +75,16 @@ $skyColor: #316f8c;
 .title {
   position: absolute;
   top: 120px;
-  left: 100px;
+  left: 50px;
   height: 70px;
-  widtH: 50px;
+  width: 50px;
   font-family: Optima, sans-serif;
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 80px;
   color: #c7c6c2;
   text-align: center;
+  font-family: handvetica-neue;
+  line-height: 1;
 }
-
-
-
-
-
-
-/*.title {
-  height: 70px;
-  font-family: Optima, sans-serif;
-  font-size: 60px;
-  font-weight: bold;
-  color: #597f8a;
-  text-align: center;
-}*/
 
 hr {
     border: 0;

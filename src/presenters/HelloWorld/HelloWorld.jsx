@@ -6,7 +6,7 @@ let numberStars = 500;
 
 const starsInSky = () => {
     return [...Array(numberStars).keys()]
-      .map(index => <div className='star-container'><div className={`star star-${index}`} key={index} /></div>);
+      .map(index => <div className={`star-container-${index}`} key={index}><div className={`star star-${index}`} key={index} /></div>);
 }
 
 const HelloWorld = ({ buttonAction }) => (
