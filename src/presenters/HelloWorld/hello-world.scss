@@ -1,11 +1,76 @@
+$numberOfStars: 500;
+$heightOfSky: 500px;
+$spaceColor: #10242d;
+$skyColor: #316f8c;
+
+.sky {
+  height: $heightOfSky;
+  width: 100%;
+  background: linear-gradient(to bottom, $spaceColor, $skyColor);
+
+  .star-container {
+    height: 100px;
+    width: 100px;
+
+    &:hover .star {
+      width: 100px;
+      height: 100px;
+    }
+
+    .star {
+      background-color: #FFF;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+  }
+
+}
+
+@for $i from 1 through $numberOfStars {
+  $size: random(125.0)/100.0 + 0.5 + px;
+
+  .star.star-#{$i} {
+    height: $size;
+    width: $size;
+    top: random($heightOfSky * 10.0)/10.0 + px;
+    left: random(1000.0)/10.0 + vw;
+    animation: sparkle (random(40.0)/10.0 + 1.0) + s infinite
+  }
+}
+
+@keyframes sparkle {
+  0%{ opacity: 1; }
+  50%{ opacity: 0.1; }
+  100%{ opacity: 1; }
+}
+
 .title {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  height: 70px;
+  widtH: 50px;
+  font-family: Optima, sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #c7c6c2;
+  text-align: center;
+}
+
+
+
+
+
+
+/*.title {
   height: 70px;
   font-family: Optima, sans-serif;
   font-size: 60px;
   font-weight: bold;
   color: #597f8a;
   text-align: center;
-}
+}*/
 
 hr {
     border: 0;
@@ -14,6 +79,8 @@ hr {
 }
 
 .navbar-container {
+  //position: absolute;
+  //top: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,3 +184,5 @@ hr {
   border-bottom: 2px solid #cc9347;
   background-color: #f5f5f5;
 }
+
+
