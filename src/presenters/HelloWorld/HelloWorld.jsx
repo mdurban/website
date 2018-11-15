@@ -16,6 +16,11 @@ const HelloWorld = ({ buttonAction }) => (
           <div className="star__shooting shooting-1" />
       </div>
 
+      <div className="moon">
+          <div className="craters-top"></div>
+          <div className="craters-bottom"></div>
+      </div>
+
     <div className='title'>Michael Urban</div>
     <div className='navbar-container'>
       <div className='navbar-element'><span className='inner-navbar-element'>about</span></div>

@@ -10,6 +10,7 @@ $skyColor: #316f8c;
 
 .sky {
   height: 50vh;//$heightOfSky;
+  min-height: 300px;
   width: 100%;
   background: linear-gradient(to bottom, $spaceColor, $skyColor);
 
@@ -200,3 +201,85 @@ hr {
 }
 
 
+
+
+$moon: #EBECDB;
+$shadow: #D5D1A0;
+$craters: #E4E2BA;
+$cratersShadow: #D5D1A0;
+
+@mixin sphere($horizontal, $vertical, $blur) {
+  box-shadow: inset $horizontal $vertical $blur 0px $shadow;
+  border-radius: 50%;
+}
+
+.moon {
+  background-color: $moon;
+  @include sphere(-8px, -7px, 2px);
+  left: 50%;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  left: 75.0vw;
+  width: 100px;
+}
+
+.craters-top {
+  background-color: $craters;
+  @include sphere(-3px, -1px, 2px);
+  height: 10px;
+  width: 10px;
+  left: 10px;
+  position: relative;
+  top: 20px;
+
+  &:before {
+    @extend .craters-top;
+    content: '';
+    height: 15px;
+    width: 15px;
+    left: 20px;
+    position: absolute;
+    top: -2px;
+  }
+
+  &:after {
+    @extend .craters-top;
+    content: '';
+    height: 17px;
+    left: -10px;
+    position: absolute;
+    top: 25px;
+    width: 8px;
+  }
+}
+
+.craters-bottom {
+  background-color: $craters;
+  @include sphere(-3px, -1px, 2px);
+  height: 15px;
+  width: 15px;
+  position: relative;
+  left: 45px;
+  top: 55px;
+
+  &:before{
+    @extend .craters-bottom;
+    content: '';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    left: 15px;
+    top: -20px;
+  }
+
+  &:after{
+    @extend .craters-bottom;
+    content: '';
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    left: 30px;
+    top: -15px;
+  }
+}
