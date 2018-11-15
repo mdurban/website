@@ -28,7 +28,7 @@ const HelloWorld = ({ buttonAction }) => (
       <div className='navbar-element'><span className='inner-navbar-element'>projects</span></div>
       <div className='navbar-element'><span className='inner-navbar-element'>contact</span></div>
     </div>
-    <hr />
+    <hr className='breaker' />
 
   {/*<div className='about'>
     <div className='header'>about</div>
