@@ -1,0 +1,22 @@
+.lego-block {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  .lego-notches {
+    display: flex;
+    justify-content: space-around;
+
+    .notch {
+      height: 12px;
+      width: 28px;
+      border-radius: 25% 25% 0 0;
+      background-color: green;
+    }
+  }
+
+  .block {
+    height: 65px;
+    background-color: green;
+  }
+}

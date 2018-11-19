@@ -1,6 +1,11 @@
 import React from 'react'
 import ChildComponentConnector from '../../connectors/ChildComponentConnector'
+import Lego from '../Lego'
 import './hello-world.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 let numberStars = 500;
 
@@ -21,6 +26,8 @@ const HelloWorld = ({ buttonAction }) => (
           <div className="craters-bottom"></div>
       </div>
 
+
+
     <div className='title'>Michael Urban</div>
     <div className='navbar-container'>
       <div className='navbar-element'><span className='inner-navbar-element'>about</span></div>
@@ -29,6 +36,35 @@ const HelloWorld = ({ buttonAction }) => (
       <div className='navbar-element'><span className='inner-navbar-element'>contact</span></div>
     </div>
     <hr className='breaker' />
+
+      {/*<div className='lego-block'>*/}
+          {/*<div className='lego-notches'>*/}
+              {/*<div className='notch'></div>*/}
+              {/*<div className='notch'></div>*/}
+              {/*<div className='notch'></div>*/}
+              {/*<div className='notch'></div>*/}
+          {/*</div>*/}
+          {/*<div className='block'/>*/}
+      {/*</div>*/}
+
+      <Lego />
+
+      {/*<div*/}
+          {/*data-aos="fade-down"*/}
+          {/*data-aos-duration="1000"*/}
+          {/*className='aos-test'*/}
+      {/*>*/}
+      <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+          className='aos-test-one'
+      />
 
   {/*<div className='about'>
     <div className='header'>about</div>
@@ -41,20 +77,30 @@ const HelloWorld = ({ buttonAction }) => (
 
 
 
-  {/*<div className='header'></div>*/}
-  {/*<div className='resume-container'>*/}
-    {/*<div className='company-names'>*/}
-      {/*<div className='company'>Pillar Technology</div>*/}
-      {/*<div className='company-info'>*/}
-        {/*<div className='date'>2014 - Present</div>*/}
-        {/*<div className='position'>Senior Software Engineer</div>*/}
-      {/*</div>*/}
+  <div className='header'>Resume</div>
+  <div
+      className='resume-container'
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+  >
+    <div className='company-names'>
+      <div className='company'>Pillar Technology</div>
+      <div className='company-info'>
+        <div className='date'>2014 - Present</div>
+        <div className='position'>Senior Software Engineer</div>
+      </div>
       {/*<div className='company'>Cisco Systems</div>*/}
       {/*<div className='company-info'>*/}
         {/*<div className='date'>2012 - 2014</div>*/}
         {/*<div className='position'>Software Engineer</div>*/}
       {/*</div>*/}
-    {/*</div>*/}
+    </div>
     {/*<div className='job-descriptions'>*/}
       {/*<ul>*/}
       {/*<li>*/}
@@ -71,7 +117,7 @@ const HelloWorld = ({ buttonAction }) => (
       {/*</li>*/}
       {/*</ul>*/}
     {/*</div>*/}
-  {/*</div>*/}
+  </div>
   {/*<div className='projects'></div>*/}
   {/*<div className='contact'></div>*/}
 
